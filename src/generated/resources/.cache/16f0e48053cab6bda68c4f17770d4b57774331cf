@@ -1,0 +1,4 @@
+// 1.20.1	2026-08-11T19:00:55.4323541	Tags for minecraft:block mod id actinium
+07b09db062118de36c314fd90d61cc9314bbd124 data/actinium/tags/blocks/needs_steel_tool.json
+a7973eccb4c8477b7cf7a47608d5717eaa8b1eef data/minecraft/tags/blocks/mineable/pickaxe.json
+f462574b76d05abb0a258b02f9e07b8a1d360f59 data/minecraft/tags/blocks/needs_iron_tool.json

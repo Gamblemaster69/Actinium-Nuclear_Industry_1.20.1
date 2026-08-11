@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": {
+      "item": "actinium:uranium_ingot"
+    }
+  },
+  "pattern": [
+    "U",
+    "U"
+  ],
+  "result": {
+    "item": "actinium:uranium_fuel_rod"
+  },
+  "show_notification": true
+}

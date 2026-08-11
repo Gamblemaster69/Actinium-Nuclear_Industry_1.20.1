@@ -1,0 +1,34 @@
+{
+  "item.actinium.raw_uranium": "Raw Uranium",
+  "item.actinium.uranium_ingot": "Raw Uranium",
+  "item.actinium.uranium_fuel_rod": "Uranium Fuel Rod",
+  "item.actinium.steel_ingot": "Steel Ingot",
+  "item.actinium.steel_sword": "Steel Sword",
+  "item.actinium.steel_pickaxe": "Steel Pickaxe",
+  "item.actinium.steel_axe": "Steel Axe",
+  "item.actinium.steel_shovel": "Steel Shovel",
+  "item.actinium.steel_hoe": "Steel Hoe",
+  "item.actinium.steel_helmet": "Steel Helmet",
+  "item.actinium.steel_chestplate": "Steel Chestplate",
+  "item.actinium.steel_leggings": "Steel Leggings",
+  "item.actinium.steel_boots": "Steel Boots",
+  "item.actinium.hazmat_helmet": "Hazmat Suit Helmet",
+  "item.actinium.hazmat_chestplate": "Hazmat Suit Chestplate",
+  "item.actinium.hazmat_leggings": "Hazmat Suit Leggings",
+  "item.actinium.hazmat_boots": "Hazmat Suit Boots",
+  "item.actinium.geiger_counter": "Geiger Counter",
+
+  "block.actinium.uranium_ore": "Uranium Ore",
+  "block.actinium.steel_block": "Steel Block",
+
+  "tooltip.actinium.radioaktiveItem.tooltip": "Radiation of %d",
+  "tooltip.actinium.radioaktiveBlock.tooltip": "Radiation of %d",
+  "tooltip.actinium.protection.tooltip": "Radiaton Protection of %d%%",
+  "tooltip.actinium.geigerCounter.tooltip": "displays your current radiation",
+
+  "message.actinium.geigerCounter": "Current Radiation = %.f2",
+
+  "effect.actinium.irradiated": "Irradiated",
+  "effect.actinium.radiation_resistance": "Radiation Resistance",
+  "creativetab.actinium_tab": "Actinium: Nuclear Industry"
+}
