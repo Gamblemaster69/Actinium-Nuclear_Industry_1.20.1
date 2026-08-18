@@ -46,6 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.URANIUM_FUEL_ROD);
         simpleItem(ModItems.STEEL_INGOT);
         simpleItem(ModItems.GEIGER_COUNTER);
+        simpleItem(ModItems.OIL_BUCKET);
 
         handheldItem(ModItems.STEEL_SWORD);
         handheldItem(ModItems.STEEL_PICKAXE);

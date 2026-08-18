@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-11T19:48:05.5390295	Item Models: actinium
+// 1.20.1	2026-08-18T02:03:34.8862267	Item Models: actinium
 cfc70c13ba6d15564e7272cc2faa9158ba3d6f48 assets/actinium/models/item/geiger_counter.json
 934f531a2ee265e6737161a52d26ed970578486c assets/actinium/models/item/hazmat_boots.json
 c3ef2ab7e7452ff3f82c8f522e338744095f6deb assets/actinium/models/item/hazmat_boots_amethyst_trim.json
@@ -44,6 +44,7 @@ cfef2d0c8d5affac449fea80acfe7e6430120990 assets/actinium/models/item/hazmat_legg
 bf9e3aa01e83793f9e1925d180628e322d77cf81 assets/actinium/models/item/hazmat_leggings_netherite_trim.json
 01f8135aec45597b75c23126299d01735a48cc51 assets/actinium/models/item/hazmat_leggings_quartz_trim.json
 a9685fc0af40eb117efff8a12995aa0034391139 assets/actinium/models/item/hazmat_leggings_redstone_trim.json
+eaec6e2d1bb175e3625395bce76ea024d6d29909 assets/actinium/models/item/oil_bucket.json
 975a24f5b554bddd4fa3c7fcac6a9f25837e853a assets/actinium/models/item/raw_uranium.json
 90306c51091a80a48121d6b2706d2c3d483ec693 assets/actinium/models/item/steel_axe.json
 a33c8228e9ca052d5f54bccacda5701dbad66d30 assets/actinium/models/item/steel_boots.json

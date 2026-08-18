@@ -3,6 +3,8 @@ package net.lebaguette.actinium;
 import com.mojang.logging.LogUtils;
 import net.lebaguette.actinium.block.ModBlocks;
 import net.lebaguette.actinium.effect.ModEffects;
+import net.lebaguette.actinium.fluid.ModFluidTypes;
+import net.lebaguette.actinium.fluid.ModFluids;
 import net.lebaguette.actinium.item.ModCreativeModTabs;
 import net.lebaguette.actinium.item.ModItems;
 import net.lebaguette.actinium.loot.ModLootModifiers;
@@ -36,6 +38,8 @@ public class Actinium
 
         ModCreativeModTabs.register(modEventBus);
 
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEffects.register(modEventBus);

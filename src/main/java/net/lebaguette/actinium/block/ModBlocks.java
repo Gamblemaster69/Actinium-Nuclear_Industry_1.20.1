@@ -2,6 +2,7 @@ package net.lebaguette.actinium.block;
 
 import net.lebaguette.actinium.Actinium;
 import net.lebaguette.actinium.block.custom.RadioaktiveBlock;
+import net.lebaguette.actinium.fluid.ModFluids;
 import net.lebaguette.actinium.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,6 +25,10 @@ public class ModBlocks {
     //Radioaktiv Blocks
     public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore",
             () -> new RadioaktiveBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).requiresCorrectToolForDrops(),5));
+
+    //Liquid Blocks
+    public static final RegistryObject<LiquidBlock> OIL_BLOCK = BLOCKS.register("oil",
+            () -> new LiquidBlock(ModFluids.OIL.get(), BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

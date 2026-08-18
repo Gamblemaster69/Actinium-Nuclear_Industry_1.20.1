@@ -1,6 +1,7 @@
 package net.lebaguette.actinium.item;
 
 import net.lebaguette.actinium.Actinium;
+import net.lebaguette.actinium.fluid.ModFluids;
 import net.lebaguette.actinium.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,9 +16,12 @@ public class ModItems {
     //normal Items
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> GEIGER_COUNTER = ITEMS.register("geiger_counter",
             () -> new GeigerCounterItem(new Item.Properties()));
+
+    //Bucket Items
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
+            () -> new BucketItem(ModFluids.OIL.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     //Radioactive Items
     public static final RegistryObject<Item> RAW_URANIUM = ITEMS.register("raw_uranium",

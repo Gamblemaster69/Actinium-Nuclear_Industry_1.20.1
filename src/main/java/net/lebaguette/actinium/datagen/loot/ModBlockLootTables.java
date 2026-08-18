@@ -13,6 +13,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -28,6 +29,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.URANIUM_ORE.get(),
                 block -> createUraniumOreDrops(ModBlocks.URANIUM_ORE.get(), ModItems.RAW_URANIUM.get()));
+
+        this.add(ModBlocks.OIL_BLOCK.get(), noDrop());
 
     }
     //custom Loot table drop similar to Copper Ore
