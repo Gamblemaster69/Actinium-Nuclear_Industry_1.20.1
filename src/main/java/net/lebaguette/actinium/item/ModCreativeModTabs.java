@@ -37,9 +37,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.HAZMAT_LEGGINGS.get());
                         output.accept(ModItems.HAZMAT_BOOTS.get());
                         output.accept(ModItems.GEIGER_COUNTER.get());
+                        output.accept(ModItems.OIL_BUCKET.get());
                         // Blocks
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.URANIUM_ORE.get());
+                        output.accept(ModBlocks.PUMPJACK.get());
                     })
                     .build());
 

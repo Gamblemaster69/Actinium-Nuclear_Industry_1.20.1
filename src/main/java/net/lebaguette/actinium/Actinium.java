@@ -2,6 +2,7 @@ package net.lebaguette.actinium;
 
 import com.mojang.logging.LogUtils;
 import net.lebaguette.actinium.block.ModBlocks;
+import net.lebaguette.actinium.block.entity.ModBlockEntities;
 import net.lebaguette.actinium.effect.ModEffects;
 import net.lebaguette.actinium.fluid.ModFluidTypes;
 import net.lebaguette.actinium.fluid.ModFluids;
@@ -45,6 +46,7 @@ public class Actinium
         ModEffects.register(modEventBus);
         ModSounds.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

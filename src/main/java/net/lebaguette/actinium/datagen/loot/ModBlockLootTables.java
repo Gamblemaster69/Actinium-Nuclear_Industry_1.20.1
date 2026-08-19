@@ -26,12 +26,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
+        this.dropSelf(ModBlocks.PUMPJACK.get());
 
         this.add(ModBlocks.URANIUM_ORE.get(),
                 block -> createUraniumOreDrops(ModBlocks.URANIUM_ORE.get(), ModItems.RAW_URANIUM.get()));
 
         this.add(ModBlocks.OIL_BLOCK.get(), noDrop());
-
     }
     //custom Loot table drop similar to Copper Ore
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

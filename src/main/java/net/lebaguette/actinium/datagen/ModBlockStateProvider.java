@@ -6,6 +6,7 @@ import net.lebaguette.actinium.fluid.BaseFluidType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,6 +21,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.URANIUM_ORE);
         blockWithItem(ModBlocks.STEEL_BLOCK);
+
+        simpleBlockWithItem(ModBlocks.PUMPJACK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/pumpjack")));
 
         fluidBlock(ModBlocks.OIL_BLOCK);
     }
