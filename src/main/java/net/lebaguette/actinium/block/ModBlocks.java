@@ -1,6 +1,7 @@
 package net.lebaguette.actinium.block;
 
 import net.lebaguette.actinium.Actinium;
+import net.lebaguette.actinium.block.custom.PumpjackBlock;
 import net.lebaguette.actinium.block.custom.RadioaktiveBlock;
 import net.lebaguette.actinium.fluid.ModFluids;
 import net.lebaguette.actinium.item.ModItems;
@@ -29,6 +30,10 @@ public class ModBlocks {
     //Liquid Blocks
     public static final RegistryObject<LiquidBlock> OIL_BLOCK = BLOCKS.register("oil",
             () -> new LiquidBlock(ModFluids.OIL.get(), BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    //BlockEntities
+    public static final RegistryObject<Block> PUMPJACK =  BLOCKS.register("pumpjack",
+            () -> new PumpjackBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

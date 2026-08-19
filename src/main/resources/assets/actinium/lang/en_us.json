@@ -28,6 +28,8 @@
 
   "message.actinium.geigerCounter": "Current Radiation = %.f2",
 
+  "displayname.actinium.pumpjack": "Pumpjack",
+
   "effect.actinium.irradiated": "Irradiated",
   "effect.actinium.radiation_resistance": "Radiation Resistance",
   "creativetab.actinium_tab": "Actinium: Nuclear Industry"
