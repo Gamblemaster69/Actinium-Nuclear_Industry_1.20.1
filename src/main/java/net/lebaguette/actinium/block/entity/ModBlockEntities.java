@@ -2,8 +2,6 @@ package net.lebaguette.actinium.block.entity;
 
 import net.lebaguette.actinium.Actinium;
 import net.lebaguette.actinium.block.ModBlocks;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

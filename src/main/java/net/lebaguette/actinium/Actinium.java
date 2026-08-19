@@ -9,7 +9,10 @@ import net.lebaguette.actinium.fluid.ModFluids;
 import net.lebaguette.actinium.item.ModCreativeModTabs;
 import net.lebaguette.actinium.item.ModItems;
 import net.lebaguette.actinium.loot.ModLootModifiers;
+import net.lebaguette.actinium.screen.ModMenuTypes;
+import net.lebaguette.actinium.screen.PumpjackMenu;
 import net.lebaguette.actinium.sound.ModSounds;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -47,6 +50,7 @@ public class Actinium
         ModSounds.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -78,7 +82,7 @@ public class Actinium
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.PUMPJACK_MENU.get(), PumpjackMenu::new);
         }
     }
 }
