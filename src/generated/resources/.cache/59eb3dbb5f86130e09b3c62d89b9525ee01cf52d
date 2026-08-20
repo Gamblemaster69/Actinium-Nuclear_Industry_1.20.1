@@ -1,4 +1,5 @@
-// 1.20.1	2026-08-18T02:03:34.8899335	Loot Tables
+// 1.20.1	2026-08-20T19:59:47.9196374	Loot Tables
 d96b4a08629e02a1bcae4a2eda4b760448d1d6f8 data/actinium/loot_tables/blocks/oil.json
+4eeb8cb5d3a96a36e74ee95940d4df76d98e5b32 data/actinium/loot_tables/blocks/pumpjack.json
 facc9f6e9446652f3c3b05f282a6e933ed5a6614 data/actinium/loot_tables/blocks/steel_block.json
 ce1b30a5aa0620ecb96f62f7ea0a2c0aa50eb0bd data/actinium/loot_tables/blocks/uranium_ore.json

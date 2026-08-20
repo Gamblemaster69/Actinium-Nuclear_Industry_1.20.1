@@ -41,7 +41,7 @@ public class ModCreativeModTabs {
                         // Blocks
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                         output.accept(ModBlocks.URANIUM_ORE.get());
-                        output.accept(ModBlocks.PUMPJACK.get());
+                        //output.accept(ModBlocks.PUMPJACK.get());
                     })
                     .build());
 

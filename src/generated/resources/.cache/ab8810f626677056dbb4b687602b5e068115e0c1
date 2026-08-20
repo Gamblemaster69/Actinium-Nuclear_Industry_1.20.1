@@ -1,9 +1,11 @@
-// 1.20.1	2026-08-18T02:03:34.8889215	Block States: actinium
+// 1.20.1	2026-08-20T19:59:47.9170941	Block States: actinium
 cb0248a60e27da1227a0843451367b70778abb84 assets/actinium/blockstates/oil.json
+c13ba55eea183eb8d8bbd6b411d4f3aced2fd3c1 assets/actinium/blockstates/pumpjack.json
 68862ef6b00ac3cf66d6e2bcd248afaa4e561dd3 assets/actinium/blockstates/steel_block.json
 bd65a4ab1e1252d80cae609dff94ec56555dade7 assets/actinium/blockstates/uranium_ore.json
 35726ac708f626c43b6b0591cf255006f575ba59 assets/actinium/models/block/oil.json
 fffb63e02850ef78a0311d04e8787338a13fc36d assets/actinium/models/block/steel_block.json
 676a252a0ee0f7958fb25671694dee4dc01f6a0f assets/actinium/models/block/uranium_ore.json
+af9ce1490d2e70941f64fbf35eda57f0cb499db6 assets/actinium/models/item/pumpjack.json
 3fe633fb3623a6d427daf543ce7117fb5721ef58 assets/actinium/models/item/steel_block.json
 03a1bafae1834f6080f7c3cd47622a71c2289687 assets/actinium/models/item/uranium_ore.json

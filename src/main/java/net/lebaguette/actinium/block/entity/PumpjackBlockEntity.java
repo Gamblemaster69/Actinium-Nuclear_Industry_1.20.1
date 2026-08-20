@@ -161,6 +161,4 @@ public class PumpjackBlockEntity extends BlockEntity implements MenuProvider {
         boolean isEmpty = outputStack.isEmpty();
         return isEmpty;
     }
-
-
 }

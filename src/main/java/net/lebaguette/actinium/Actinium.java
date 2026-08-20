@@ -11,6 +11,7 @@ import net.lebaguette.actinium.item.ModItems;
 import net.lebaguette.actinium.loot.ModLootModifiers;
 import net.lebaguette.actinium.screen.ModMenuTypes;
 import net.lebaguette.actinium.screen.PumpjackMenu;
+import net.lebaguette.actinium.screen.PumpjackScreen;
 import net.lebaguette.actinium.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
@@ -82,7 +83,7 @@ public class Actinium
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            MenuScreens.register(ModMenuTypes.PUMPJACK_MENU.get(), PumpjackMenu::new);
+            MenuScreens.register(ModMenuTypes.PUMPJACK_MENU.get(), PumpjackScreen::new);
         }
     }
 }
