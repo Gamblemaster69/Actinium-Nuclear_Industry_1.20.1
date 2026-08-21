@@ -30,8 +30,8 @@ public class PumpjackMenu extends AbstractContainerMenu {
         addDataSlots(pData);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler,0,57,90));
-            this.addSlot(new SlotItemHandler(iItemHandler,1,103,90));
+            this.addSlot(new SlotItemHandler(iItemHandler,0,58,91));
+            this.addSlot(new SlotItemHandler(iItemHandler,1,104,91));
         });
        addPlayerInventory(pPlayerInv);
        addPlayerHotbar(pPlayerInv);
@@ -50,14 +50,14 @@ public class PumpjackMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 119 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playInvertory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playInvertory, i, 8 + i * 18, 142));
+            this.addSlot(new Slot(playInvertory, i, 8 + i * 18, 177));
         }
     }
 

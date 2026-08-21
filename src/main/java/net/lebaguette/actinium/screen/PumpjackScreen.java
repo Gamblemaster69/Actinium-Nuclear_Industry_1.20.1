@@ -11,14 +11,18 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
 
+    private static final int TEXTURE_WIDTH = 190;
+    private static final int TEXTURE_HEIGHT = 200;
+
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Actinium.MOD_ID, "textures/gui/pumpjack.png");
+            new ResourceLocation(Actinium.MOD_ID, "textures/gui/pumpjack_gui.png");
 
     public PumpjackScreen(PumpjackMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
         this.imageWidth = 176;
         this.imageHeight = 199;
     }
+
 
     @Override
     protected void renderBg(GuiGraphics pGuiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
@@ -29,7 +33,8 @@ public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
         int y = (height - imageHeight) / 2;
 
         //BACKGROUND
-        pGuiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+        pGuiGraphics.blit(TEXTURE, x, y, imageWidth, imageHeight,
+                0.0f, 0.0f, imageWidth, imageHeight, TEXTURE_WIDTH, TEXTURE_HEIGHT);
 
         //TANK
         int fluidAmound = this.menu.getFluidAmount();
@@ -42,16 +47,11 @@ public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
         if (filledHeight > 0) {
             int sourceX = 178;
             int sourceY = 22 + (tankHeight - filledHeight);
-
             int targetX = x + 136;
             int targetY = y + 22 + (tankHeight - filledHeight);
 
-            pGuiGraphics.blit(
-                    TEXTURE,
-                    targetX, targetY,
-                    sourceX, sourceY,
-                    10,
-                    filledHeight);
+            pGuiGraphics.blit(TEXTURE, targetX, targetY, 10, filledHeight,
+                    sourceX, sourceY, 10, filledHeight, TEXTURE_WIDTH, TEXTURE_HEIGHT);
         }
     }
 
