@@ -7,6 +7,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
@@ -37,9 +38,44 @@ public class PumpjackMenu extends AbstractContainerMenu {
        addPlayerHotbar(pPlayerInv);
     }
 
+    private static final int TE_INVENTORY_FIRST_SLOT_INDEX = 0;
+    private static final int TE_INVENTORY_SLOT_COUNT = 2;
+    private static final int VANILLA_FIRST_SLOT_INDEX = TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT; // = 2
+    private static final int VANILLA_SLOT_COUNT = 36; // 27 Inventar + 9 Hotbar
+
     @Override
     public ItemStack quickMoveStack(Player pPlayer, int pIndex) {
-        return null;
+        Slot sourceSlot = slots.get(pIndex);
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+
+        ItemStack sourceStack = sourceSlot.getItem();
+        ItemStack copyOfSourceStack = sourceStack.copy();
+
+        if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
+            // Klick war auf einen Maschinen-Slot -> Item ins Spieler-Inventar verschieben
+            if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, true)) {
+                return ItemStack.EMPTY;
+            }
+        } else if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
+            // Klick war im Spieler-Inventar -> nur leere Eimer dürfen automatisch in den Input wandern
+            if (sourceStack.is(Items.BUCKET)) {
+                if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + 1, false)) {
+                    return ItemStack.EMPTY;
+                }
+            } else {
+                return ItemStack.EMPTY;
+            }
+        } else {
+            return ItemStack.EMPTY;
+        }
+
+        if (sourceStack.getCount() == 0) {
+            sourceSlot.set(ItemStack.EMPTY);
+        } else {
+            sourceSlot.setChanged();
+        }
+        sourceSlot.onTake(pPlayer, sourceStack);
+        return copyOfSourceStack;
     }
 
     @Override

@@ -56,6 +56,12 @@ public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
     }
 
     @Override
+    protected void init() {
+        super.init();
+        this.inventoryLabelY = 107;
+    }
+
+    @Override
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float delta) {
         renderBackground(pGuiGraphics);
 
@@ -67,7 +73,7 @@ public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
 
         String text = fluidAmount + " mB";
 
-        int textX = this.leftPos + 77 - this.font.width(text);
+        int textX = this.leftPos + 123 - this.font.width(text);
         int textY = this.topPos + 60;
 
         pGuiGraphics.drawString(
@@ -75,8 +81,8 @@ public class PumpjackScreen extends AbstractContainerScreen<PumpjackMenu> {
                 text,
                 textX,
                 textY,
-                0xFFFFFF,
-                true
+                0x404040,
+                false
         );
     }
 }

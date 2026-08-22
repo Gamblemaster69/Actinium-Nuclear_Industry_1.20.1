@@ -32,7 +32,7 @@ public class ModBlocks {
             () -> new LiquidBlock(ModFluids.OIL.get(), BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     //BlockEntities
-    public static final RegistryObject<Block> PUMPJACK =  BLOCKS.register("pumpjack",
+    public static final RegistryObject<Block> PUMPJACK =  registerBlock("pumpjack",
             () -> new PumpjackBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

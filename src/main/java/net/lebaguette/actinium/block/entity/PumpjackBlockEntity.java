@@ -152,7 +152,7 @@ public class PumpjackBlockEntity extends BlockEntity implements MenuProvider {
 
             ItemStack currentOutput = itemStackHandler.getStackInSlot(OUTPUT_SLOT);
             itemStackHandler.setStackInSlot(OUTPUT_SLOT,
-                    new ItemStack(ModItems.OIL_BUCKET.get(), currentOutput.getCount()));
+                    new ItemStack(ModItems.OIL_BUCKET.get(), currentOutput.getCount() + 1));
         }
     }
 
